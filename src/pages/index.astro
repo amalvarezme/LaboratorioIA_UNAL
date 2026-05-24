@@ -13,21 +13,21 @@ const ecosystem = [
   },
   {
     name: "Semillero de Investigación en Ciencia de Datos e Inteligencia Artificial",
-    detail: "Formación aplicada en ciencia de datos, aprendizaje automático e IA.",
+    detail: "Formación aplicada en ciencia de datos, aprendizaje automático e IA",
     image: "logos/logoDatosIA.png"
   },
   {
     name: "Semillero de Investigación en Física e Inteligencia Artificial",
-    detail: "Modelado, simulación y física computacional soportada por IA.",
+    detail: "Modelado, simulación y física computacional soportada por IA",
     image: "logos/logoFisicaIA.png"
   }
 ];
 
 const purposes = [
-  "I+D+i desde IA, ofreciendo experiencias formativas que integran teoría y práctica.",
-  "Impulsar el desarrollo de sistemas inteligentes soportados por IA mediante la generación de soluciones innovadoras con impacto regional y nacional.",
-  "Crear productos y servicios tecnológicos basados en IA.",
-  "Vincular estudiantes de pregrado y posgrado en proyectos interdisciplinarios."
+  "I+D+i desde IA, ofreciendo experiencias formativas que integran teoría y práctica",
+  "Impulsar el desarrollo de sistemas inteligentes soportados por IA mediante la generación de soluciones innovadoras con impacto regional y nacional",
+  "Crear productos y servicios tecnológicos basados en IA",
+  "Vincular estudiantes de pregrado y posgrado en proyectos interdisciplinarios"
 ];
 
 const programs = [
@@ -37,29 +37,35 @@ const programs = [
   "Ciencias de la Computación",
   "Matemáticas",
   "Estadística",
-  "Especialización en Aprendizaje Automático Mediante IA",
+  "Especialización en Aprendizaje Automático e IA",
   "Maestría en Automatización Industrial",
   "Maestría en Ciencias - Física",
   "Doctorado en Ingeniería - Automática"
 ];
 
 const lines = [
-  { title: "Visión por computador", kind: "vision" },
-  { title: "Neuro-Ingeniería", kind: "neuro" },
-  { title: "Analítica de datos", kind: "data" },
-  { title: "Agricultura inteligente", kind: "agro" },
-  { title: "Energías renovables", kind: "energy" },
-  { title: "LLMs y agentes", kind: "agents" },
-  { title: "Física computacional apoyada por IA", kind: "physics" },
-  { title: "Computación cuántica", kind: "quantum" },
-  { title: "Desarrollo de software apoyado por IA", kind: "software" }
+  { title: "Visión por computador", image: "lineas/visionpc-web.png" },
+  { title: "Neuroingeniería", image: "lineas/neuroingenieria-web.png" },
+  { title: "Analítica de datos", image: "lineas/analitica-web.png" },
+  { title: "Agricultura inteligente", image: "lineas/agriculturainteligente-web.png" },
+  { title: "Energías renovables", image: "lineas/energiasrenovables-web.png" },
+  { title: "LLMs y agentes", image: "lineas/agentes-web.png" },
+  { title: "Física computacional", image: "lineas/fisicacomputacional-web.png" },
+  { title: "Computación cuántica", image: "lineas/cuantica-web.png" },
+  { title: "Desarrollo de software + IA", image: "lineas/desarrollosoftware-web.png" }
 ];
 
 const allies = [
+  { name: "Acemate", file: "acemate.jpg" },
   { name: "Aguas de Manizales", file: "aguasMzls.png" },
+  { name: "BIOS", file: "bios.jpeg" },
   { name: "Universidad de Kentucky", file: "uk.png" },
   { name: "CHEC", file: "chec.jpeg" },
+  { name: "Casa Luker", file: "luker.png" },
+  { name: "Minciencias", file: "minciencias.png" },
   { name: "Multilab", file: "multilab.jpeg" },
+  { name: "Neurocentro", file: "neurocentro.jpeg" },
+  { name: "SES", file: "ses.png" },
   { name: "Universidad de Antioquia", file: "udea.png" },
   { name: "Universidad Nacional de Colombia", file: "logo_unal.png" },
   { name: "UTEC", file: "utec.jpeg" },
@@ -73,6 +79,44 @@ const allies = [
   { name: "UPSE", file: "upse.jpeg" },
   { name: "UTP", file: "utp.png" }
 ];
+
+const relatedLinks = [
+  {
+    title: "GrupLAC Minciencias",
+    links: [
+      {
+        label: "Grupo de Control y Procesamiento Digital de Señales",
+        href: "https://scienti.minciencias.gov.co/gruplac/jsp/visualiza/visualizagr.jsp?nro=00000000001375"
+      }
+    ]
+  },
+  {
+    title: "Prof. Germán Castellanos",
+    links: [
+      {
+        label: "CvLAC - Investigador Senior",
+        href: "https://scienti.minciencias.gov.co/cvlac/visualizador/generarCurriculoCv.do?cod_rh=0000043222"
+      },
+      {
+        label: "Google Scholar",
+        href: "https://scholar.google.com/citations?user=RbCdiT0AAAAJ&hl=es&oi=ao"
+      }
+    ]
+  },
+  {
+    title: "Prof. Andrés Marino Álvarez",
+    links: [
+      {
+        label: "CvLAC - Investigador Senior",
+        href: "https://scienti.minciencias.gov.co/cvlac/visualizador/generarCurriculoCv.do?cod_rh=0001330950"
+      },
+      {
+        label: "Google Scholar",
+        href: "https://scholar.google.com/citations?user=4aUwQtAAAAAJ&hl=en"
+      }
+    ]
+  }
+];
 ---
 
 <!doctype html>
@@ -82,7 +126,7 @@ const allies = [
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="Laboratorio de Inteligencia Artificial de la Universidad Nacional de Colombia, sede Manizales."
+      content="Laboratorio de Inteligencia Artificial de la Universidad Nacional de Colombia, sede Manizales"
     />
     <title>Laboratorio de Inteligencia Artificial | UNAL Manizales</title>
     <link rel="icon" type="image/png" href={asset("logos/logo_labIA.png")} />
@@ -91,11 +135,17 @@ const allies = [
     <header class="site-header" aria-label="Navegación principal">
       <a class="brand" href="#inicio" aria-label="Ir al inicio">
         <img src={asset("logos/logo_labIA.png")} alt="" />
-        <span>Lab IA UNAL</span>
+        <span>LIA-UNAL</span>
       </a>
       <nav>
+        <a href="#inicio">Inicio</a>
+        <a href="#ubicacion">Ubicación</a>
         <a href="#ecosistema">Ecosistema</a>
+        <a href="#propositos">Propósitos</a>
+        <a href="#programas">Programas</a>
         <a href="#lineas">Líneas</a>
+        <a href="#aliados">Aliados</a>
+        <a href="#enlaces">Enlaces</a>
         <a href="#contacto">Contacto</a>
       </nav>
     </header>
@@ -121,11 +171,11 @@ const allies = [
         </div>
         <div class="hero-content">
           <img class="hero-logo" src={asset("logos/logo_labIA.png")} alt="Logo del Laboratorio de Inteligencia Artificial" />
-          <p class="eyebrow">Universidad Nacional de Colombia - Sede Manizales</p>
-          <h1>Laboratorio de Inteligencia Artificial</h1>
+          <h1 class="sr-only">Laboratorio de Inteligencia Artificial</h1>
           <p class="lead">
-            I+D+i, formación avanza y soluciones tecnológicas basadas en IA.
+            I+D+i, formación avanza y soluciones tecnológicas basadas en IA
           </p>
+          <p class="hero-university">Universidad Nacional de Colombia - Sede Manizales</p>
         </div>
       </section>
 
@@ -135,7 +185,7 @@ const allies = [
           <h2>Campus La Nubia</h2>
           <p>
             Bloque S1 Aula 114 Campus La Nubia, Universidad Nacional de Colombia,
-            sede Manizales-Caldas, Colombia.
+            sede Manizales-Caldas, Colombia
           </p>
           <img class="location-logo" src={asset("logos/logo_unal.png")} alt="Logo Universidad Nacional de Colombia" />
         </div>
@@ -177,9 +227,11 @@ const allies = [
           <div class="talent-copy">
             <p class="eyebrow">Talento humano</p>
             <h3>Comunidad académica conectada con IA aplicada</h3>
-            <p>
-              Profesores: Germán Castellanos, Ph.D.; Andrés Marino Álvarez, Ph.D.; Jorge Iván Montes, PhD.
-            </p>
+            <ul class="professor-list" aria-label="Profesores del laboratorio">
+              <li>Germán Castellanos-Domínguez, Ph.D. (Dir. GCPDS)</li>
+              <li>Jorge Iván Montes-Monsalve, Ph.D. (Líder Física+IA)</li>
+              <li>Andrés Marino Álvarez-Meza, Ph.D. (Dir. Lab IA-UNAL)</li>
+            </ul>
             <div class="metrics" aria-label="Métricas de talento humano">
               <span><strong>+40</strong> doctores formados</span>
               <span><strong>+80</strong> magísteres formados</span>
@@ -189,7 +241,7 @@ const allies = [
         </div>
       </section>
 
-      <section class="section split">
+      <section id="propositos" class="section split">
         <div>
           <p class="eyebrow">Propósitos</p>
           <h2>IA para aprender, crear y transferir tecnología</h2>
@@ -199,7 +251,7 @@ const allies = [
         </div>
       </section>
 
-      <section class="section programs">
+      <section id="programas" class="section programs">
         <div class="section-heading">
           <p class="eyebrow">Impacto académico</p>
           <h2>Programas académicos impactados</h2>
@@ -212,21 +264,14 @@ const allies = [
       <section id="lineas" class="section work-lines">
         <div class="section-heading">
           <p class="eyebrow">Líneas de trabajo</p>
-          <h2>Tendencias actuales soportadas por inteligencia artificial</h2>
+          <h2>I+D+i desde IA</h2>
         </div>
         <div class="line-grid">
           {
             lines.map((line) => (
-              <article class={`line-card ${line.kind}`}>
+              <article class="line-card">
                 <div class="line-visual" aria-hidden="true">
-                  <span></span>
-                  <svg viewBox="0 0 120 120" role="presentation" focusable="false">
-                    <path class="shape-a" d="M24 72 C34 34 82 28 96 64 C84 94 42 100 24 72Z" />
-                    <path class="shape-b" d="M36 60 L58 38 L84 58 L70 84 L42 82Z" />
-                    <circle class="dot-a" cx="38" cy="58" r="5" />
-                    <circle class="dot-b" cx="78" cy="58" r="5" />
-                    <circle class="dot-c" cx="60" cy="84" r="5" />
-                  </svg>
+                  <img src={asset(line.image)} alt="" loading="lazy" />
                 </div>
                 <h3>{line.title}</h3>
               </article>
@@ -235,13 +280,45 @@ const allies = [
         </div>
       </section>
 
-      <section class="section allies">
+      <section id="aliados" class="section allies">
         <div class="section-heading">
           <p class="eyebrow">Aliados</p>
           <h2>Red de trabajo</h2>
         </div>
-        <div class="ally-strip" aria-label="Logos de aliados">
-          {allies.map((ally) => <img src={asset(`aliados/${ally.file}`)} alt={ally.name} loading="lazy" />)}
+        <div class="ally-carousel" aria-label="Logos de aliados">
+          <div class="ally-track">
+            <div class="ally-set">
+              {allies.map((ally) => <img src={asset(`aliados/${ally.file}`)} alt={ally.name} />)}
+            </div>
+            <div class="ally-set" aria-hidden="true">
+              {allies.map((ally) => <img src={asset(`aliados/${ally.file}`)} alt="" />)}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="enlaces" class="section related-links">
+        <div class="section-heading">
+          <p class="eyebrow">Enlaces relacionados</p>
+          <h2>Links de interés</h2>
+        </div>
+        <div class="related-grid">
+          {
+            relatedLinks.map((group) => (
+              <article class="related-card">
+                <h3>{group.title}</h3>
+                <div class="related-actions">
+                  {
+                    group.links.map((link) => (
+                      <a href={link.href} target="_blank" rel="noreferrer">
+                        {link.label}
+                      </a>
+                    ))
+                  }
+                </div>
+              </article>
+            ))
+          }
         </div>
       </section>
     </main>
