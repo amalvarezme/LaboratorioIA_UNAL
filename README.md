@@ -1,6 +1,6 @@
-# Laboratorio en Inteligencia Artificial UNAL
+# Laboratorio de Inteligencia Artificial UNAL
 
-Sitio web estático del Laboratorio en Inteligencia Artificial de la Universidad Nacional de Colombia, sede Manizales.
+Sitio web estático del Laboratorio de Inteligencia Artificial de la Universidad Nacional de Colombia, sede Manizales.
 
 ## Desarrollo local
 

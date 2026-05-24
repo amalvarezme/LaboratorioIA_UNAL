@@ -24,10 +24,10 @@ const ecosystem = [
 ];
 
 const purposes = [
-  "I+D+i basado en IA, ofreciendo experiencias formativas que integran la teoría y la práctica.",
-  "Impulsar el desarrollo de sistemas inteligentes soportados por IA, reforzando el aprendizaje práctico y la generación de soluciones innovadoras con impacto regional y nacional.",
+  "I+D+i desde IA, ofreciendo experiencias formativas que integran teoría y práctica.",
+  "Impulsar el desarrollo de sistemas inteligentes soportados por IA mediante la generación de soluciones innovadoras con impacto regional y nacional.",
   "Crear productos y servicios tecnológicos basados en IA.",
-  "Vincular estudiantes de pregrado y posgrado en proyectos interdisciplinarios de alto impacto."
+  "Vincular estudiantes de pregrado y posgrado en proyectos interdisciplinarios."
 ];
 
 const programs = [
@@ -82,9 +82,9 @@ const allies = [
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="Laboratorio en Inteligencia Artificial de la Universidad Nacional de Colombia, sede Manizales."
+      content="Laboratorio de Inteligencia Artificial de la Universidad Nacional de Colombia, sede Manizales."
     />
-    <title>Laboratorio en Inteligencia Artificial | UNAL Manizales</title>
+    <title>Laboratorio de Inteligencia Artificial | UNAL Manizales</title>
     <link rel="icon" type="image/png" href={asset("logos/logo_labIA.png")} />
   </head>
   <body>
@@ -120,16 +120,12 @@ const allies = [
           </svg>
         </div>
         <div class="hero-content">
-          <img class="hero-logo" src={asset("logos/logo_labIA.png")} alt="Logo del Laboratorio en Inteligencia Artificial" />
+          <img class="hero-logo" src={asset("logos/logo_labIA.png")} alt="Logo del Laboratorio de Inteligencia Artificial" />
           <p class="eyebrow">Universidad Nacional de Colombia - Sede Manizales</p>
-          <h1>Laboratorio en Inteligencia Artificial</h1>
+          <h1>Laboratorio de Inteligencia Artificial</h1>
           <p class="lead">
-            I+D+i, formación avanzada y soluciones tecnológicas basadas en IA para retos regionales y nacionales.
+            I+D+i, formación avanza y soluciones tecnológicas basadas en IA.
           </p>
-          <div class="hero-actions" aria-label="Accesos principales">
-            <a class="button primary" href="#ubicacion">Ubicación</a>
-            <a class="button secondary" href="#lineas">Líneas de trabajo</a>
-          </div>
         </div>
       </section>
 
@@ -141,16 +137,17 @@ const allies = [
             Bloque S1 Aula 114 Campus La Nubia, Universidad Nacional de Colombia,
             sede Manizales-Caldas, Colombia.
           </p>
+          <img class="location-logo" src={asset("logos/logo_unal.png")} alt="Logo Universidad Nacional de Colombia" />
         </div>
         <figure class="image-panel">
-          <img src={asset("logos/UNAL_LaNUbia.jpeg")} alt="Campus La Nubia de la Universidad Nacional de Colombia" />
+          <img src={asset("logos/lanubia.jpg")} alt="Campus La Nubia de la Universidad Nacional de Colombia" />
         </figure>
       </section>
 
       <section id="ecosistema" class="section">
         <div class="section-heading">
           <p class="eyebrow">Ecosistema</p>
-          <h2>Investigación, semilleros y talento humano</h2>
+          <h2>Grupo de investigación, semilleros y talento humano</h2>
         </div>
 
         <div class="ecosystem-grid">
@@ -181,7 +178,7 @@ const allies = [
             <p class="eyebrow">Talento humano</p>
             <h3>Comunidad académica conectada con IA aplicada</h3>
             <p>
-              Profesores: Jorge Iván Montes, PhD; Germán Castellanos, Ph.D.; Andrés Marino Álvarez, Ph.D.
+              Profesores: Germán Castellanos, Ph.D.; Andrés Marino Álvarez, Ph.D.; Jorge Iván Montes, PhD.
             </p>
             <div class="metrics" aria-label="Métricas de talento humano">
               <span><strong>+40</strong> doctores formados</span>
@@ -205,7 +202,7 @@ const allies = [
       <section class="section programs">
         <div class="section-heading">
           <p class="eyebrow">Impacto académico</p>
-          <h2>Programas académicos que impacta el laboratorio</h2>
+          <h2>Programas académicos impactados</h2>
         </div>
         <div class="program-grid">
           {programs.map((program) => <span>{program}</span>)}
@@ -241,7 +238,7 @@ const allies = [
       <section class="section allies">
         <div class="section-heading">
           <p class="eyebrow">Aliados</p>
-          <h2>Entidades con las que el laboratorio ha trabajado</h2>
+          <h2>Red de trabajo</h2>
         </div>
         <div class="ally-strip" aria-label="Logos de aliados">
           {allies.map((ally) => <img src={asset(`aliados/${ally.file}`)} alt={ally.name} loading="lazy" />)}

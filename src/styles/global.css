@@ -184,40 +184,10 @@ h3 {
 
 .lead {
   max-width: 720px;
-  margin-bottom: 34px;
+  margin-bottom: 0;
   color: #d7dbd2;
   font-size: 1.22rem;
   line-height: 1.65;
-}
-
-.hero-actions {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 14px;
-}
-
-.button {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 46px;
-  padding: 0 18px;
-  border: 1px solid var(--line);
-  border-radius: 8px;
-  text-decoration: none;
-  font-weight: 800;
-}
-
-.button.primary {
-  color: #031208;
-  border-color: var(--green);
-  background: var(--green);
-}
-
-.button.secondary {
-  color: var(--text);
-  background: rgba(255, 255, 255, 0.06);
 }
 
 .ai-field {
@@ -282,6 +252,17 @@ h3 {
   line-height: 1.7;
 }
 
+.location-logo {
+  width: min(220px, 68%);
+  margin-top: 28px;
+  padding: 14px 18px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.95);
+  object-fit: contain;
+  box-shadow: 0 18px 42px rgba(0, 0, 0, 0.2);
+}
+
 .image-panel {
   margin: 0;
   overflow: hidden;
@@ -321,7 +302,7 @@ h3 {
 
 .ecosystem-card {
   display: flex;
-  min-height: 230px;
+  min-height: 300px;
   flex-direction: column;
   justify-content: space-between;
   padding: 22px;
@@ -336,9 +317,14 @@ h3 {
 }
 
 .ecosystem-card img {
-  width: 82px;
-  height: 82px;
+  width: 132px;
+  height: 132px;
+  padding: 14px;
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.96);
   object-fit: contain;
+  box-shadow: 0 18px 42px rgba(0, 0, 0, 0.22);
 }
 
 .ecosystem-card p {
