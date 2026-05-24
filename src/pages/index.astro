@@ -1,0 +1,257 @@
+---
+import "../styles/global.css";
+
+const base = import.meta.env.BASE_URL;
+const asset = (path) => `${base.replace(/\/?$/, "/")}${path}`;
+
+const ecosystem = [
+  {
+    name: "Grupo de Control y Procesamiento Digital de Señales",
+    detail: "Fundación 1998 - A1 Minciencias",
+    image: "logos/logogcpds.png",
+    href: "https://scienti.minciencias.gov.co/gruplac/jsp/visualiza/visualizagr.jsp?nro=00000000001375"
+  },
+  {
+    name: "Semillero de Investigación en Ciencia de Datos e Inteligencia Artificial",
+    detail: "Formación aplicada en ciencia de datos, aprendizaje automático e IA.",
+    image: "logos/logoDatosIA.png"
+  },
+  {
+    name: "Semillero de Investigación en Física e Inteligencia Artificial",
+    detail: "Modelado, simulación y física computacional soportada por IA.",
+    image: "logos/logoFisicaIA.png"
+  }
+];
+
+const purposes = [
+  "I+D+i basado en IA, ofreciendo experiencias formativas que integran la teoría y la práctica.",
+  "Impulsar el desarrollo de sistemas inteligentes soportados por IA, reforzando el aprendizaje práctico y la generación de soluciones innovadoras con impacto regional y nacional.",
+  "Crear productos y servicios tecnológicos basados en IA.",
+  "Vincular estudiantes de pregrado y posgrado en proyectos interdisciplinarios de alto impacto."
+];
+
+const programs = [
+  "Ingeniería Eléctrica",
+  "Ingeniería Electrónica",
+  "Ingeniería Física",
+  "Ciencias de la Computación",
+  "Matemáticas",
+  "Estadística",
+  "Especialización en Aprendizaje Automático Mediante IA",
+  "Maestría en Automatización Industrial",
+  "Maestría en Ciencias - Física",
+  "Doctorado en Ingeniería - Automática"
+];
+
+const lines = [
+  { title: "Visión por computador", kind: "vision" },
+  { title: "Neuro-Ingeniería", kind: "neuro" },
+  { title: "Analítica de datos", kind: "data" },
+  { title: "Agricultura inteligente", kind: "agro" },
+  { title: "Energías renovables", kind: "energy" },
+  { title: "LLMs y agentes", kind: "agents" },
+  { title: "Física computacional apoyada por IA", kind: "physics" },
+  { title: "Computación cuántica", kind: "quantum" },
+  { title: "Desarrollo de software apoyado por IA", kind: "software" }
+];
+
+const allies = [
+  { name: "Aguas de Manizales", file: "aguasMzls.png" },
+  { name: "Universidad de Kentucky", file: "uk.png" },
+  { name: "CHEC", file: "chec.jpeg" },
+  { name: "Multilab", file: "multilab.jpeg" },
+  { name: "Universidad de Antioquia", file: "udea.png" },
+  { name: "Universidad Nacional de Colombia", file: "logo_unal.png" },
+  { name: "UTEC", file: "utec.jpeg" },
+  { name: "ANE", file: "ane.png" },
+  { name: "Universidad de Edimburgo", file: "uedimburgo.png" },
+  { name: "Universidad de Valencia", file: "uvalencia.png" },
+  { name: "Agrosavia", file: "agrosavia.png" },
+  { name: "University of Florida", file: "uf.png" },
+  { name: "Datapeers", file: "datapeers.png" },
+  { name: "ITBA", file: "itba.png" },
+  { name: "UPSE", file: "upse.jpeg" },
+  { name: "UTP", file: "utp.png" }
+];
+---
+
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Laboratorio en Inteligencia Artificial de la Universidad Nacional de Colombia, sede Manizales."
+    />
+    <title>Laboratorio en Inteligencia Artificial | UNAL Manizales</title>
+    <link rel="icon" type="image/png" href={asset("logos/logo_labIA.png")} />
+  </head>
+  <body>
+    <header class="site-header" aria-label="Navegación principal">
+      <a class="brand" href="#inicio" aria-label="Ir al inicio">
+        <img src={asset("logos/logo_labIA.png")} alt="" />
+        <span>Lab IA UNAL</span>
+      </a>
+      <nav>
+        <a href="#ecosistema">Ecosistema</a>
+        <a href="#lineas">Líneas</a>
+        <a href="#contacto">Contacto</a>
+      </nav>
+    </header>
+
+    <main id="inicio">
+      <section class="hero section">
+        <div class="ai-field" aria-hidden="true">
+          <span class="node n1"></span>
+          <span class="node n2"></span>
+          <span class="node n3"></span>
+          <span class="node n4"></span>
+          <span class="node n5"></span>
+          <span class="node n6"></span>
+          <span class="pulse p1"></span>
+          <span class="pulse p2"></span>
+          <span class="pulse p3"></span>
+          <svg viewBox="0 0 900 540" role="presentation" focusable="false">
+            <path d="M98 128 C230 64 310 210 438 146 S690 104 788 232" />
+            <path d="M110 390 C260 270 370 428 500 302 S692 262 808 404" />
+            <path d="M202 120 L340 298 L520 170 L700 332" />
+            <path d="M150 360 L322 180 L552 368 L748 150" />
+          </svg>
+        </div>
+        <div class="hero-content">
+          <img class="hero-logo" src={asset("logos/logo_labIA.png")} alt="Logo del Laboratorio en Inteligencia Artificial" />
+          <p class="eyebrow">Universidad Nacional de Colombia - Sede Manizales</p>
+          <h1>Laboratorio en Inteligencia Artificial</h1>
+          <p class="lead">
+            I+D+i, formación avanzada y soluciones tecnológicas basadas en IA para retos regionales y nacionales.
+          </p>
+          <div class="hero-actions" aria-label="Accesos principales">
+            <a class="button primary" href="#ubicacion">Ubicación</a>
+            <a class="button secondary" href="#lineas">Líneas de trabajo</a>
+          </div>
+        </div>
+      </section>
+
+      <section id="ubicacion" class="section location">
+        <div class="section-copy">
+          <p class="eyebrow">Ubicación</p>
+          <h2>Campus La Nubia</h2>
+          <p>
+            Bloque S1 Aula 114 Campus La Nubia, Universidad Nacional de Colombia,
+            sede Manizales-Caldas, Colombia.
+          </p>
+        </div>
+        <figure class="image-panel">
+          <img src={asset("logos/UNAL_LaNUbia.jpeg")} alt="Campus La Nubia de la Universidad Nacional de Colombia" />
+        </figure>
+      </section>
+
+      <section id="ecosistema" class="section">
+        <div class="section-heading">
+          <p class="eyebrow">Ecosistema</p>
+          <h2>Investigación, semilleros y talento humano</h2>
+        </div>
+
+        <div class="ecosystem-grid">
+          {
+            ecosystem.map((item) => {
+              const CardTag = item.href ? "a" : "article";
+              return (
+                <CardTag
+                  class="ecosystem-card"
+                  href={item.href}
+                  target={item.href ? "_blank" : undefined}
+                  rel={item.href ? "noreferrer" : undefined}
+                >
+                  <img src={asset(item.image)} alt={`Logo ${item.name}`} loading="lazy" />
+                  <div>
+                    <h3>{item.name}</h3>
+                    <p>{item.detail}</p>
+                  </div>
+                </CardTag>
+              );
+            })
+          }
+        </div>
+
+        <div class="talent">
+          <img src={asset("logos/miembros_lab.jpeg")} alt="Miembros del ecosistema del laboratorio" loading="lazy" />
+          <div class="talent-copy">
+            <p class="eyebrow">Talento humano</p>
+            <h3>Comunidad académica conectada con IA aplicada</h3>
+            <p>
+              Profesores: Jorge Iván Montes, PhD; Germán Castellanos, Ph.D.; Andrés Marino Álvarez, Ph.D.
+            </p>
+            <div class="metrics" aria-label="Métricas de talento humano">
+              <span><strong>+40</strong> doctores formados</span>
+              <span><strong>+80</strong> magísteres formados</span>
+              <span><strong>+300</strong> estudiantes de pregrado vinculados</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section split">
+        <div>
+          <p class="eyebrow">Propósitos</p>
+          <h2>IA para aprender, crear y transferir tecnología</h2>
+        </div>
+        <div class="purpose-list">
+          {purposes.map((purpose) => <article><span></span><p>{purpose}</p></article>)}
+        </div>
+      </section>
+
+      <section class="section programs">
+        <div class="section-heading">
+          <p class="eyebrow">Impacto académico</p>
+          <h2>Programas académicos que impacta el laboratorio</h2>
+        </div>
+        <div class="program-grid">
+          {programs.map((program) => <span>{program}</span>)}
+        </div>
+      </section>
+
+      <section id="lineas" class="section work-lines">
+        <div class="section-heading">
+          <p class="eyebrow">Líneas de trabajo</p>
+          <h2>Tendencias actuales soportadas por inteligencia artificial</h2>
+        </div>
+        <div class="line-grid">
+          {
+            lines.map((line) => (
+              <article class={`line-card ${line.kind}`}>
+                <div class="line-visual" aria-hidden="true">
+                  <span></span>
+                  <svg viewBox="0 0 120 120" role="presentation" focusable="false">
+                    <path class="shape-a" d="M24 72 C34 34 82 28 96 64 C84 94 42 100 24 72Z" />
+                    <path class="shape-b" d="M36 60 L58 38 L84 58 L70 84 L42 82Z" />
+                    <circle class="dot-a" cx="38" cy="58" r="5" />
+                    <circle class="dot-b" cx="78" cy="58" r="5" />
+                    <circle class="dot-c" cx="60" cy="84" r="5" />
+                  </svg>
+                </div>
+                <h3>{line.title}</h3>
+              </article>
+            ))
+          }
+        </div>
+      </section>
+
+      <section class="section allies">
+        <div class="section-heading">
+          <p class="eyebrow">Aliados</p>
+          <h2>Entidades con las que el laboratorio ha trabajado</h2>
+        </div>
+        <div class="ally-strip" aria-label="Logos de aliados">
+          {allies.map((ally) => <img src={asset(`aliados/${ally.file}`)} alt={ally.name} loading="lazy" />)}
+        </div>
+      </section>
+    </main>
+
+    <footer id="contacto" class="footer">
+      <p>Contacto</p>
+      <a href="mailto:amalvarezme@unal.edu.co">amalvarezme@unal.edu.co</a>
+    </footer>
+  </body>
+</html>
