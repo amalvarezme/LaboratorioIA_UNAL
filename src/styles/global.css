@@ -618,6 +618,34 @@ h3 {
   background: rgba(0, 122, 159, 0.14);
 }
 
+.contact {
+  padding-bottom: 88px;
+}
+
+.contact-mail {
+  display: inline-flex;
+  width: fit-content;
+  margin: 4px 0 18px;
+  padding: 10px 13px;
+  border: 1px solid rgba(0, 122, 159, 0.28);
+  border-radius: 8px;
+  color: #00647f;
+  background: rgba(0, 122, 159, 0.08);
+  font-weight: 800;
+  line-height: 1.25;
+  text-decoration: none;
+  transition:
+    background 180ms ease,
+    border-color 180ms ease,
+    color 180ms ease;
+}
+
+.contact-mail:hover {
+  color: #044252;
+  border-color: rgba(0, 122, 159, 0.45);
+  background: rgba(0, 122, 159, 0.14);
+}
+
 .footer {
   display: flex;
   align-items: center;

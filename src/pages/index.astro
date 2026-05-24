@@ -66,8 +66,10 @@ const allies = [
   { name: "Multilab", file: "transparentes/multilab.png" },
   { name: "Neurocentro", file: "transparentes/neurocentro.png" },
   { name: "SES", file: "transparentes/ses.png" },
+  { name: "Universidad Autónoma de Manizales", file: "transparentes/uam.png" },
+  { name: "Universidad de Caldas", file: "transparentes/ucaldas.png" },
   { name: "Universidad de Antioquia", file: "transparentes/udea.png" },
-  { name: "Universidad Nacional de Colombia", file: "transparentes/logo_unal.png" },
+  { name: "Universidad Nacional de Colombia", file: "transparentes/unal.png" },
   { name: "UTEC", file: "transparentes/utec.png" },
   { name: "ANE", file: "transparentes/ane.png" },
   { name: "Universidad de Edimburgo", file: "transparentes/uedimburgo.png" },
@@ -139,7 +141,6 @@ const relatedLinks = [
       </a>
       <nav>
         <a href="#inicio">Inicio</a>
-        <a href="#ubicacion">Ubicación</a>
         <a href="#ecosistema">Ecosistema</a>
         <a href="#propositos">Propósitos</a>
         <a href="#programas">Programas</a>
@@ -177,21 +178,6 @@ const relatedLinks = [
           </p>
           <p class="hero-university">Universidad Nacional de Colombia - Sede Manizales</p>
         </div>
-      </section>
-
-      <section id="ubicacion" class="section location">
-        <div class="section-copy">
-          <p class="eyebrow">Ubicación</p>
-          <h2>Campus La Nubia</h2>
-          <p>
-            Bloque S1 Aula 114 Campus La Nubia, Universidad Nacional de Colombia,
-            sede Manizales-Caldas, Colombia
-          </p>
-          <img class="location-logo" src={asset("logos/logo_unal_transparente.png")} alt="Logo Universidad Nacional de Colombia" />
-        </div>
-        <figure class="image-panel">
-          <img src={asset("logos/lanubia.jpg")} alt="Campus La Nubia de la Universidad Nacional de Colombia" />
-        </figure>
       </section>
 
       <section id="ecosistema" class="section">
@@ -321,11 +307,22 @@ const relatedLinks = [
           }
         </div>
       </section>
-    </main>
 
-    <footer id="contacto" class="footer">
-      <p>Contacto</p>
-      <a href="mailto:amalvarezme@unal.edu.co">amalvarezme@unal.edu.co</a>
-    </footer>
+      <section id="contacto" class="section location contact">
+        <div class="section-copy">
+          <p class="eyebrow">Contacto</p>
+          <a class="contact-mail" href="mailto:amalvarezme@unal.edu.co">amalvarezme@unal.edu.co</a>
+          <p>
+            km 7 vía al Magdalena, Campus La Nubia, Bloque S1-114,
+            Laboratorio de Inteligencia Artificial, Universidad Nacional de Colombia,
+            sede Manizales-Caldas, Colombia
+          </p>
+          <img class="location-logo" src={asset("logos/logo_unal_transparente.png")} alt="Logo Universidad Nacional de Colombia" />
+        </div>
+        <figure class="image-panel">
+          <img src={asset("logos/lanubia.jpg")} alt="Campus La Nubia de la Universidad Nacional de Colombia" />
+        </figure>
+      </section>
+    </main>
   </body>
 </html>
