@@ -1,0 +1,274 @@
+---
+import "../styles/global.css";
+
+const base = import.meta.env.BASE_URL;
+const asset = (path) => `${base.replace(/\/?$/, "/")}${path}`;
+
+const strategies = [
+  {
+    step: "01",
+    title: "Exploración de criticidad",
+    text: "Dashboard para revisar eventos, SAIDI/SAIFI, circuitos, municipios y causas con filtros operativos"
+  },
+  {
+    step: "02",
+    title: "Predicción de impacto",
+    text: "Modelos TabNet y M-GCECDL sobre UITI para estimar impacto por regresión y clases por cuantiles"
+  },
+  {
+    step: "03",
+    title: "Explicabilidad por instancia",
+    text: "Confiabilidad por modalidad y ranking local de variables para explicar cada predicción de falla"
+  }
+];
+
+const metrics = [
+  { value: "166,323", label: "eventos enriquecidos" },
+  { value: "354", label: "variables operativas, climáticas y de red" },
+  { value: "2019-01-01 / 2024-06-30", label: "rango histórico analizado" },
+  { value: "383", label: "circuitos observados" },
+  { value: "41", label: "municipios cubiertos" },
+  { value: "3", label: "tipos principales de evento" }
+];
+
+const dashboardFigures = [
+  {
+    image: "lineas/energia-chec/dashboard-mapa-red-eventos.png",
+    title: "Mapa de red y eventos",
+    text: "Vista pública simplificada de circuitos, activos y puntos de falla sin coordenadas exactas"
+  },
+  {
+    image: "lineas/energia-chec/dashboard-saidi-saifi.png",
+    title: "Tendencias SAIDI/SAIFI",
+    text: "Resumen temporal para ubicar ventanas críticas por circuito y periodo"
+  },
+  {
+    image: "lineas/energia-chec/dashboard-probabilidad.png",
+    title: "Explorador probabilístico",
+    text: "Distribuciones condicionales para revisar duración, impacto y filtros de operación"
+  }
+];
+
+const modelFigures = [
+  {
+    image: "lineas/energia-chec/modelo-metricas.png",
+    title: "Comparación de modelos",
+    text: "Referencia actual: M-GCECDL MAE 52.30, RMSE 92.26, R2 0.8289; TabNet R2 0.8649, MAE 43.57"
+  },
+  {
+    image: "lineas/energia-chec/mgcecdl-modalidades.png",
+    title: "Importancia por modalidad",
+    text: "Viento, variables térmico-radiativas e hidrometeorológicas dominan la explicación agregada"
+  },
+  {
+    image: "lineas/energia-chec/mgcecdl-feature-importance.png",
+    title: "Variables relevantes",
+    text: "Ranking de variables por incremento de error al permutar cada señal"
+  },
+  {
+    image: "lineas/energia-chec/explicabilidad-instancia.png",
+    title: "Explicación por evento",
+    text: "Lectura local de predicción, modalidades dominantes y variables que sostienen el riesgo"
+  },
+  {
+    image: "lineas/energia-chec/classification-confusion-matrix.png",
+    title: "Clasificación por cuantiles",
+    text: "Matriz de confusión para validar clases ordinales de UITI tras el rerun oficial"
+  },
+  {
+    image: "lineas/energia-chec/classification-radar-modalidades.png",
+    title: "Confiabilidad por clase",
+    text: "Radar de soporte por modalidad para comparar perfiles entre rangos de impacto"
+  }
+];
+
+const tags = [
+  "Interruptor",
+  "Transformador",
+  "Tramo de línea",
+  "Condiciones atmosféricas",
+  "Fallas en redes",
+  "Árbol o rama sobre redes",
+  "Clima",
+  "Vegetación",
+  "Topología eléctrica",
+  "M-GCECDL"
+];
+---
+
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="IA para confiabilidad de redes CHEC: criticidad, predicción de impacto y explicabilidad por evento"
+    />
+    <title>Energía | IA para confiabilidad de redes CHEC</title>
+    <link rel="icon" type="image/png" href={asset("logos/logo_labIA.png")} />
+  </head>
+  <body>
+    <header class="site-header" aria-label="Navegación principal">
+      <a class="brand" href={asset("")} aria-label="Volver al inicio">
+        <img src={asset("logos/logo_labIA.png")} alt="" />
+        <span>LIA-UNAL</span>
+      </a>
+      <details class="nav-menu">
+        <summary aria-label="Abrir menú de navegación">
+          <span class="menu-icon" aria-hidden="true">
+            <span></span>
+            <span></span>
+            <span></span>
+          </span>
+        </summary>
+        <nav class="nav-panel" aria-label="Secciones principales">
+          <a href={asset("")}>Inicio</a>
+          <a href={asset("#ecosistema")}>Ecosistema</a>
+          <a href={asset("#propositos")}>Propósitos</a>
+          <a href={asset("#programas")}>Programas</a>
+          <a href={asset("#lineas")}>Líneas</a>
+          <a href={asset("#aliados")}>Aliados</a>
+          <a href={asset("#enlaces")}>Enlaces</a>
+          <a href={asset("#contacto")}>Contacto</a>
+        </nav>
+      </details>
+    </header>
+
+    <main>
+      <section class="section detail-hero energy-hero">
+        <div class="detail-copy">
+          <a class="back-link" href={asset("#lineas")}>Volver a líneas de trabajo</a>
+          <p class="eyebrow">Línea de trabajo · Energía</p>
+          <h1>IA para confiabilidad energética con CHEC</h1>
+          <p class="lead">
+            Integramos criticidad de eventos, operación de red, clima, vegetación
+            y aprendizaje profundo para explorar fallas, anticipar impacto y explicar
+            qué variables sostienen cada predicción.
+          </p>
+        </div>
+        <figure class="detail-visual energy-hero-visual">
+          <img
+            src={asset("lineas/energia-chec/energia-chec-hero.png")}
+            alt="Red eléctrica abstracta con nodos de IA, señales climáticas, vegetación y paneles de analítica"
+          />
+        </figure>
+      </section>
+
+      <section class="section detail-content">
+        <article class="detail-diagnosis">
+          <p class="eyebrow">Diagnóstico operativo</p>
+          <p>
+            El reto operativo no es solo predecir una falla: es entender por qué
+            un circuito, tramo o evento cambia su nivel de riesgo. El proyecto
+            conecta analítica descriptiva del dashboard con modelos M-GCECDL y
+            TabNet para pasar de observación histórica a predicción explicable.
+          </p>
+        </article>
+
+        <div class="detail-grid">
+          {
+            strategies.map((item) => (
+              <article class="detail-card">
+                <span>{item.step}</span>
+                <h2>{item.title}</h2>
+                <p>{item.text}</p>
+              </article>
+            ))
+          }
+        </div>
+
+        <div class="energy-metrics" aria-label="Resumen del dataset de criticidad">
+          {metrics.map((metric) => <span><strong>{metric.value}</strong>{metric.label}</span>)}
+        </div>
+
+        <article class="detail-formal energy-formal">
+          <div>
+            <p class="eyebrow">Datos y señales</p>
+            <h2>Criticidad, red y contexto ambiental</h2>
+            <p>
+              La base integra eventos aguas abajo con duración, usuarios afectados,
+              SAIDI/SAIFI, equipo de operación, topología de red, series climáticas,
+              vegetación y variables estructurales. Las causas más frecuentes
+              incluyen condiciones atmosféricas, fallas en redes de distribución,
+              causas desconocidas y contacto de árboles o ramas sobre la red.
+            </p>
+          </div>
+          <div class="detail-tags" aria-label="Variables y componentes principales">
+            {tags.map((tag) => <span>{tag}</span>)}
+          </div>
+        </article>
+
+        <section class="energy-section" aria-labelledby="dashboard-title">
+          <div class="section-heading">
+            <p class="eyebrow">Dashboard CHEC</p>
+            <h2 id="dashboard-title">De eventos históricos a lectura operativa</h2>
+            <p>
+              Estas visualizaciones son placeholders publicables, preparados para
+              reemplazarse por exportaciones oficiales del dashboard sin exponer
+              coordenadas, popups operativos ni tablas crudas.
+            </p>
+          </div>
+          <div class="energy-visual-grid">
+            {
+              dashboardFigures.map((figure) => (
+                <article class="energy-figure">
+                  <img src={asset(figure.image)} alt={figure.title} loading="lazy" />
+                  <div>
+                    <h3>{figure.title}</h3>
+                    <p>{figure.text}</p>
+                  </div>
+                </article>
+              ))
+            }
+          </div>
+        </section>
+
+        <section class="energy-section" aria-labelledby="models-title">
+          <div class="section-heading">
+            <p class="eyebrow">Modelos e interpretabilidad</p>
+            <h2 id="models-title">Predicción de UITI con explicación por modalidad</h2>
+            <p>
+              El flujo de notebooks produce métricas, predicciones, importancia
+              por modalidad, importancia por variable y salidas por instancia.
+              Los valores publicados aquí corresponden a la ejecución de referencia
+              actual y deben reemplazarse por el rerun oficial cuando esté cerrado.
+            </p>
+          </div>
+          <div class="energy-visual-grid energy-model-grid">
+            {
+              modelFigures.map((figure) => (
+                <article class="energy-figure">
+                  <img src={asset(figure.image)} alt={figure.title} loading="lazy" />
+                  <div>
+                    <h3>{figure.title}</h3>
+                    <p>{figure.text}</p>
+                  </div>
+                </article>
+              ))
+            }
+          </div>
+        </section>
+
+        <article class="download-panel">
+          <div>
+            <p class="eyebrow">Artefactos de publicación</p>
+            <h2>Plantilla visual lista para resultados oficiales</h2>
+            <p>
+              Manteniendo estos nombres de archivo, el equipo puede sustituir
+              cada placeholder por la salida validada del dashboard o del notebook
+              sin cambiar la estructura de la página.
+            </p>
+          </div>
+          <a
+            class="download-button"
+            href={asset("lineas/energia-chec/modelo-metricas.png")}
+            download="modelo-metricas.png"
+          >
+            Descargar plantilla
+          </a>
+        </article>
+      </section>
+    </main>
+  </body>
+</html>

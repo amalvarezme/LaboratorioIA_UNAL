@@ -802,6 +802,93 @@ h3 {
   transform: translateY(-1px);
 }
 
+.energy-hero {
+  grid-template-columns: 0.78fr 1.22fr;
+}
+
+.energy-hero-visual img {
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+}
+
+.energy-metrics {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+  margin: 14px 0;
+}
+
+.energy-metrics span {
+  min-height: 104px;
+  padding: 16px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  color: var(--muted);
+  background: rgba(255, 255, 255, 0.78);
+  box-shadow: 0 12px 30px rgba(22, 38, 32, 0.06);
+}
+
+.energy-metrics strong {
+  display: block;
+  margin-bottom: 8px;
+  color: var(--cyan);
+  font-size: 1.38rem;
+  line-height: 1.1;
+}
+
+.energy-formal {
+  margin-top: 14px;
+  margin-bottom: 44px;
+}
+
+.energy-section {
+  margin-top: 38px;
+}
+
+.energy-section .section-heading p:last-child {
+  margin-bottom: 0;
+}
+
+.energy-visual-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.energy-model-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.energy-figure {
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.78);
+  box-shadow: 0 14px 38px rgba(22, 38, 32, 0.07);
+}
+
+.energy-figure img {
+  width: 100%;
+  aspect-ratio: 5 / 3;
+  border-bottom: 1px solid var(--line);
+  object-fit: cover;
+  background: var(--surface);
+}
+
+.energy-figure div {
+  padding: 18px;
+}
+
+.energy-figure h3 {
+  margin-bottom: 10px;
+}
+
+.energy-figure p {
+  margin-bottom: 0;
+  color: #26342f;
+  line-height: 1.58;
+}
+
 .allies {
   padding-bottom: 70px;
 }
@@ -1001,14 +1088,17 @@ h3 {
   .split,
   .detail-hero,
   .detail-formal,
-  .download-panel {
+  .download-panel,
+  .energy-hero {
     grid-template-columns: 1fr;
   }
 
   .ecosystem-grid,
   .line-grid,
   .detail-grid,
-  .project-grid {
+  .project-grid,
+  .energy-visual-grid,
+  .energy-model-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
@@ -1016,7 +1106,8 @@ h3 {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
-  .related-grid {
+  .related-grid,
+  .energy-metrics {
     grid-template-columns: 1fr;
   }
 }
@@ -1068,7 +1159,9 @@ h3 {
   .program-grid,
   .detail-grid,
   .project-grid,
-  .metrics {
+  .metrics,
+  .energy-visual-grid,
+  .energy-model-grid {
     grid-template-columns: 1fr;
   }
 
@@ -1246,5 +1339,4 @@ h3 {
   line-height: 1.5;
   margin: 0;
 }
-
 
