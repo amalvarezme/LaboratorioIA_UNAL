@@ -1,0 +1,181 @@
+---
+import "../styles/global.css";
+
+const base = import.meta.env.BASE_URL;
+const asset = (path) => `${base.replace(/\/?$/, "/")}${path}`;
+
+const projects = [
+  {
+    name: "Programa de Detección de Tráfico Vehicular",
+    task: "Detección y seguimiento de objetos (YOLO)",
+    problem: "Registro y análisis automatizado del tráfico vehicular urbano mediante sistemas embebidos de alto rendimiento (Jetson Nano) para la optimización del flujo y planificación de la movilidad.",
+    image: "lineas/visionpc/traffic_program.png",
+    ally: "OOPART S.A.S."
+  },
+  {
+    name: "Inspección de Infraestructura de Acueducto",
+    task: "Detección de anomalías en video",
+    problem: "Identificación automatizada de grietas, fisuras y sedimentaciones en redes de acueducto subterráneas a partir del análisis visual de video controlado obtenido por una plataforma robótica de exploración interna equipada con cámaras de alta resolución.",
+    image: "lineas/visionpc/pipe_inspection.png",
+    ally: "Aguas de Manizales"
+  },
+  {
+    name: "Monitoreo Automatizado de Germinación y Enraizamiento",
+    task: "Segmentación de semillas y raíces",
+    problem: "Desarrollo de un sistema automatizado mediante Raspberry Pi, Pi Camera y un riel gantry para segmentar semillas bajo estimulación magnética y realizar el seguimiento e identificación del crecimiento tridimensional de las raíces germinadas.",
+    image: "lineas/visionpc/seed_gantry.png",
+    ally: "U. de Caldas - G.I. en Magnetobiología"
+  },
+  {
+    name: "Termografía Materna para Evaluación de Anestesia",
+    task: "Segmentación de mapas térmicos clínicos",
+    problem: "Aplicación móvil acondicionada para entornos clínicos que realiza análisis y registro de temperatura en los dermatomas de la planta del pie mediante la segmentación de imágenes termográficas, evaluando la efectividad de la anestesia epidural.",
+    image: "lineas/visionpc/maternal_thermography.png",
+    ally: "Hospital Universitario de Caldas, S.E.S."
+  },
+  {
+    name: "Segmentación Histopatológica Oncológica",
+    task: "Segmentación celular y diagnóstico asistido",
+    problem: "Procesamiento de imágenes médicas microscópicas para la segmentación de núcleos celulares y diagnóstico automatizado de enfermedades cancerígenas a partir de muestras de biopsias histopatológicas.",
+    image: "lineas/visionpc/cancer_histopathology.png",
+    ally: "Universidad Nacional de Colombia"
+  }
+];
+
+const tags = [
+  "Segmentación 2D y 3D",
+  "Clasificación multiclase",
+  "Detección de anomalías",
+  "Procesamiento multiespectral",
+  "Transformers visuales (ViTs)"
+];
+---
+
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Línea de trabajo en Visión por Computador del Laboratorio de Inteligencia Artificial UNAL"
+    />
+    <title>Visión por computador | LIA-UNAL</title>
+    <link rel="icon" type="image/png" href={asset("logos/logo_labIA.png")} />
+  </head>
+  <body>
+    <header class="site-header" aria-label="Navegación principal">
+      <a class="brand" href={asset("")} aria-label="Volver al inicio">
+        <img src={asset("logos/logo_labIA.png")} alt="" />
+        <span>LIA-UNAL</span>
+      </a>
+      <details class="nav-menu">
+        <summary aria-label="Abrir menú de navegación">
+          <span class="menu-icon" aria-hidden="true">
+            <span></span>
+            <span></span>
+            <span></span>
+          </span>
+        </summary>
+        <nav class="nav-panel" aria-label="Secciones principales">
+          <a href={asset("")}>Inicio</a>
+          <a href={asset("#ecosistema")}>Ecosistema</a>
+          <a href={asset("#propositos")}>Propósitos</a>
+          <a href={asset("#programas")}>Programas</a>
+          <a href={asset("#lineas")}>Líneas</a>
+          <a href={asset("#aliados")}>Aliados</a>
+          <a href={asset("#enlaces")}>Enlaces</a>
+          <a href={asset("#contacto")}>Contacto</a>
+        </nav>
+      </details>
+    </header>
+
+    <main>
+      <section class="section detail-hero">
+        <div class="detail-copy">
+          <a class="back-link" href={asset("#lineas")}>Volver a líneas de trabajo</a>
+          <p class="eyebrow">Línea de trabajo</p>
+          <h1>Visión por computador</h1>
+          <p class="lead">
+            Análisis, procesamiento y entendimiento de imágenes y videos mediante algoritmos de aprendizaje profundo
+            para la automatización de decisiones en entornos clínicos, industriales y agrícolas.
+          </p>
+        </div>
+        <figure class="detail-visual">
+          <img
+            src={asset("lineas/visionpc-web.png")}
+            alt="Análisis visual asistido por computadora"
+          />
+        </figure>
+      </section>
+
+      <section class="section detail-content">
+        <article class="detail-diagnosis">
+          <p class="eyebrow">Enfoque e investigación</p>
+          <p>
+            El procesamiento de datos visuales permite responder a retos complejos de inspección, diagnóstico y monitoreo.
+            A continuación se presenta el esquema de proyectos desarrollados, detallando la tarea implementada, el problema
+            que ataca, su representación visual y el aliado estratégico con quien se llevó a cabo.
+          </p>
+        </article>
+
+        <div class="project-grid" aria-label="Proyectos de Visión por Computador">
+          {
+            projects.map((project) => (
+              <article class="project-card">
+                <div class="project-image-wrapper">
+                  <img
+                    src={asset(project.image)}
+                    alt={`Representación visual de: ${project.name}`}
+                    loading="lazy"
+                  />
+                </div>
+                <div class="project-content">
+                  <span class="project-task">{project.task}</span>
+                  <h3>{project.name}</h3>
+                  <p class="project-problem">{project.problem}</p>
+                  <div class="project-ally-box">
+                    <span class="project-ally-label">Aliado:</span>
+                    <span class="project-ally-name">{project.ally}</span>
+                  </div>
+                </div>
+              </article>
+            ))
+          }
+        </div>
+
+        <article class="detail-formal">
+          <div>
+            <p class="eyebrow">Capacidades técnicas</p>
+            <h2>Metodologías y Tecnologías en VC</h2>
+            <p>
+              Implementamos flujos completos de visión artificial, desde la curaduría y anotación de datasets,
+              hasta el entrenamiento de modelos de estado del arte y optimización para el despliegue en
+              servidores locales, computación en la nube o dispositivos de borde (edge computing).
+            </p>
+          </div>
+          <div class="detail-tags" aria-label="Tecnologías de visión por computador">
+            {tags.map((tag) => <span>{tag}</span>)}
+          </div>
+        </article>
+
+        <article class="download-panel">
+          <div>
+            <p class="eyebrow">Contacto y Colaboraciones</p>
+            <h2>¿Tienes un proyecto o reto de visión artificial?</h2>
+            <p>
+              Colaboramos activamente con el sector productivo, la academia y entidades del área de salud
+              para desarrollar soluciones basadas en el procesamiento inteligente de imágenes.
+            </p>
+          </div>
+          <a
+            class="download-button"
+            href="mailto:amalvarezme@unal.edu.co"
+          >
+            Contáctanos
+          </a>
+        </article>
+      </section>
+    </main>
+  </body>
+</html>

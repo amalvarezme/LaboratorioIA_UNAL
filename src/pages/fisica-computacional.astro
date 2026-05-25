@@ -1,0 +1,190 @@
+---
+import "../styles/global.css";
+
+const base = import.meta.env.BASE_URL;
+const asset = (path) => `${base.replace(/\/?$/, "/")}${path}`;
+
+const projects = [
+  {
+    name: "IA para Nuevos Materiales y Dispositivos",
+    task: "Simulación & Predicción de Propiedades Físicas",
+    problem: "Aceleración del diseño de materiales y dispositivos electrónicos utilizando modelos surrogates de aprendizaje automático que aprenden a partir de simulaciones físicas y validan con datos experimentales.",
+    subEnfoques: [
+      "Simulación asistida por IA: Sustitución de simulaciones físicas costosas (Monte Carlo, dinámica molecular, Hamiltonianos) por modelos surrogates rápidos.",
+      "Predicción de propiedades: Estimación de propiedades eléctricas, magnéticas o térmicas sin ciclos completos de simulación.",
+      "Cierre del ciclo simulación-experimento: Integración bidireccional y calibración de datos de simulación y laboratorio."
+    ],
+    cases: "Diseño de nanopartículas magnéticas para sensores · Optimización de materiales para LEDs y transistores · Caracterización acelerada de baterías y celdas solares · Sustratos para espintrónica.",
+    image: "lineas/fisicacomputacional/nuevos_materiales.png",
+    ally: "UAM, DunderLab"
+  },
+  {
+    name: "IA Informada por la Física (PIML) para el Sector Energético",
+    task: "Physics-Informed Machine Learning",
+    problem: "Modelos predictivos que incorporan ecuaciones e invariantes físicas (como leyes de conservación) en el entrenamiento de redes neuronales, garantizando explicabilidad y consistencia para sectores de alta regulación.",
+    subEnfoques: [
+      "Estimación de potencial energético: Modelado que integra variables geológicas y ecuaciones termodinámicas (ej. ciclos ORC).",
+      "Integración multi-fuente de datos: Consolidación de datos heterogéneos (pozos, series temporales, georreferenciación y subsuelo).",
+      "Pre-factibilidad técnica automatizada: Herramientas de priorización de activos mediante criterios técnicos y económicos."
+    ],
+    cases: "Geotermia desde agua coproducida en campos O&G · Planeación energética con fuentes no convencionales · Optimización de operaciones en activos maduros · Modelos predictivos para reguladores y operadores.",
+    image: "lineas/fisicacomputacional/piml_energia.png",
+    ally: "ANH, Minciencias, UTP"
+  }
+];
+
+const tags = [
+  "Physics-Informed Neural Networks (PINNs)",
+  "Modelos Surrogate (Surrogate Modeling)",
+  "Cuantificación de Incertidumbre",
+  "Transformers & CNNs para Datos Espaciales",
+  "GIS & Datos Georreferenciados",
+  "Transfer Learning",
+  "Dinámica Molecular & Hamiltonianos"
+];
+---
+
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Línea de trabajo en Física Computacional del Laboratorio de Inteligencia Artificial UNAL"
+    />
+    <title>Física computacional | LIA-UNAL</title>
+    <link rel="icon" type="image/png" href={asset("logos/logo_labIA.png")} />
+  </head>
+  <body>
+    <header class="site-header" aria-label="Navegación principal">
+      <a class="brand" href={asset("")} aria-label="Volver al inicio">
+        <img src={asset("logos/logo_labIA.png")} alt="" />
+        <span>LIA-UNAL</span>
+      </a>
+      <details class="nav-menu">
+        <summary aria-label="Abrir menú de navegación">
+          <span class="menu-icon" aria-hidden="true">
+            <span></span>
+            <span></span>
+            <span></span>
+          </span>
+        </summary>
+        <nav class="nav-panel" aria-label="Secciones principales">
+          <a href={asset("")}>Inicio</a>
+          <a href={asset("#ecosistema")}>Ecosistema</a>
+          <a href={asset("#propositos")}>Propósitos</a>
+          <a href={asset("#programas")}>Programas</a>
+          <a href={asset("#lineas")}>Líneas</a>
+          <a href={asset("#aliados")}>Aliados</a>
+          <a href={asset("#enlaces")}>Enlaces</a>
+          <a href={asset("#contacto")}>Contacto</a>
+        </nav>
+      </details>
+    </header>
+
+    <main>
+      <section class="section detail-hero">
+        <div class="detail-copy">
+          <a class="back-link" href={asset("#lineas")}>Volver a líneas de trabajo</a>
+          <p class="eyebrow">Línea de trabajo</p>
+          <h1>Física computacional</h1>
+          <p class="lead">
+            Aceleración de simulaciones físicas, modelado de sistemas complejos e integración de leyes de conservación
+            en arquitecturas de aprendizaje profundo para el sector energético y la ciencia de materiales.
+          </p>
+        </div>
+        <figure class="detail-visual">
+          <img
+            src={asset("lineas/fisicacomputacional-web.png")}
+            alt="Simulaciones físicas asistidas por IA"
+          />
+        </figure>
+      </section>
+
+      <section class="section detail-content">
+        <article class="detail-diagnosis">
+          <p class="eyebrow">Diagnóstico y Enfoque</p>
+          <p>
+            El desarrollo de nuevos materiales y los estudios en sectores regulados (como hidrocarburos y energía) se enfrentan a un
+            cuello de botella: las simulaciones rigurosas son extremadamente costosas y los experimentos lentos. Abordamos esto
+            mediante el aprendizaje automático informado por la física (PIML) y modelos surrogates, reduciendo los tiempos de cálculo
+            y garantizando que las predicciones respeten invariables físicas como conservación de masa y energía.
+          </p>
+        </article>
+
+        <div class="project-grid" aria-label="Proyectos de Física Computacional">
+          {
+            projects.map((project) => (
+              <article class="project-card">
+                <div class="project-image-wrapper">
+                  <img
+                    src={asset(project.image)}
+                    alt={`Representación visual de: ${project.name}`}
+                    loading="lazy"
+                  />
+                </div>
+                <div class="project-content">
+                  <span class="project-task">{project.task}</span>
+                  <h3>{project.name}</h3>
+                  <p class="project-problem">{project.problem}</p>
+
+                  <div class="project-details-section">
+                    <h4>Sub-enfoques:</h4>
+                    <ul>
+                      {project.subEnfoques.map((sub) => (
+                        <li>{sub}</li>
+                      ))}
+                    </ul>
+                  </div>
+
+                  <div class="project-details-section">
+                    <h4>Casos de aplicación:</h4>
+                    <p class="project-cases">{project.cases}</p>
+                  </div>
+
+                  <div class="project-ally-box">
+                    <span class="project-ally-label">Aliados:</span>
+                    <span class="project-ally-name">{project.ally}</span>
+                  </div>
+                </div>
+              </article>
+            ))
+          }
+        </div>
+
+        <article class="detail-formal">
+          <div>
+            <p class="eyebrow">Capacidades técnicas</p>
+            <h2>Metodologías y Tecnologías en Física Computacional</h2>
+            <p>
+              Diseñamos arquitecturas avanzadas que integran operadores diferenciales, cálculo fraccionario y simuladores numéricos clásicos
+              con redes neuronales convolucionales y transformers, permitiendo cuantificar la incertidumbre y transferir conocimientos entre
+              diferentes escalas físicas.
+            </p>
+          </div>
+          <div class="detail-tags" aria-label="Tecnologías de física computacional">
+            {tags.map((tag) => <span>{tag}</span>)}
+          </div>
+        </article>
+
+        <article class="download-panel">
+          <div>
+            <p class="eyebrow">Contacto y Colaboraciones</p>
+            <h2>¿Quieres aplicar IA informada por la física en tu organización?</h2>
+            <p>
+              Trabajamos junto con centros de investigación, la industria energética y de manufactura para codificar principios físicos
+              dentro de modelos predictivos y optimizar sistemas complejos.
+            </p>
+          </div>
+          <a
+            class="download-button"
+            href="mailto:amalvarezme@unal.edu.co"
+          >
+            Contáctanos
+          </a>
+        </article>
+      </section>
+    </main>
+  </body>
+</html>
