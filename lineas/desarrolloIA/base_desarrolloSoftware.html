@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estrategias de Desarrollo con IA</title>
+    <style>
+        :root {
+            --text-main: #111827;
+            --text-muted: #6b7280;
+            --bg-main: #ffffff;
+            --bg-card: #f9fafb;
+            --accent: #000000;
+            --border: #e5e7eb;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, sans-serif;
+            color: var(--text-main);
+            background: var(--bg-main);
+            line-height: 1.5;
+            padding: 2rem;
+            display: flex;
+            justify-content: center;
+        }
+
+        .container {
+            max-width: 800px;
+            width: 100%;
+        }
+
+        header {
+            margin-bottom: 3rem;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 2rem;
+            font-weight: 700;
+            letter-spacing: -0.025em;
+            margin-bottom: 0.5rem;
+        }
+
+        .subtitle {
+            color: var(--text-muted);
+            font-size: 1.1rem;
+        }
+
+        .diagnosis {
+            background: var(--bg-card);
+            border-left: 3px solid var(--accent);
+            padding: 1.5rem;
+            margin-bottom: 3rem;
+            border-radius: 0 8px 8px 0;
+            font-size: 0.95rem;
+        }
+
+        .diagnosis strong { font-weight: 600; }
+
+        h2 {
+            font-size: 1.25rem;
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 1px solid var(--border);
+            font-weight: 600;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 3rem;
+        }
+
+        .card {
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 1.5rem;
+            background: var(--bg-main);
+            transition: transform 0.2s;
+        }
+
+        .card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+        }
+
+        .card-header {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin-bottom: 1rem;
+            font-weight: 600;
+        }
+
+        .card-icon {
+            font-size: 1.25rem;
+        }
+
+        .card p {
+            font-size: 0.9rem;
+            color: var(--text-muted);
+        }
+
+        .flow-section {
+            background: var(--bg-card);
+            padding: 2rem;
+            border-radius: 8px;
+            border: 1px solid var(--border);
+            text-align: center;
+        }
+
+        .flow-section p {
+            font-size: 0.9rem;
+            color: var(--text-muted);
+            margin-bottom: 1.5rem;
+        }
+
+        .tags {
+            display: flex;
+            gap: 0.5rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .tag {
+            background: var(--bg-main);
+            border: 1px solid var(--border);
+            padding: 0.25rem 0.75rem;
+            border-radius: 999px;
+            font-size: 0.8rem;
+            font-weight: 500;
+        }
+
+        footer {
+            margin-top: 4rem;
+            text-align: center;
+            font-size: 0.85rem;
+            color: var(--text-muted);
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <header>
+        <h1>Desarrollo Asistido por IA</h1>
+        <div class="subtitle">De la intuición creativa a la orquestación formal</div>
+    </header>
+
+    <div class="diagnosis">
+        <strong>Diagnóstico Previo:</strong> La elección de la estrategia debe basarse en un análisis profundo de las necesidades de la empresa y del cliente. No existe un enfoque único; se debe equilibrar la agilidad requerida con la criticidad y seguridad del negocio.
+    </div>
+
+    <h2>1. Exploración e Intuición</h2>
+    <div class="grid">
+        <div class="card">
+            <div class="card-header">
+                <span class="card-icon">🌊</span> Vibe Coding
+            </div>
+            <p>Enfoque informal que prioriza el "flow" y la intuición del desarrollador por encima de la documentación. Ideal para ideación rápida y experimentación sin fricciones.</p>
+        </div>
+        <div class="card">
+            <div class="card-header">
+                <span class="card-icon">⚙️</span> Vibe Engineering
+            </div>
+            <p>Aplica una estructura ligera a la intuición. Busca optimizar la experiencia del desarrollador, creando entornos donde el código fluya de manera natural pero guiada.</p>
+        </div>
+    </div>
+
+    <h2>2. Traducción y Aceleración</h2>
+    <div class="grid" style="grid-template-columns: 1fr;">
+        <div class="card" style="border-left: 3px solid var(--text-main);">
+            <div class="card-header">
+                <span class="card-icon">💬</span> Desarrollo por Prompts
+            </div>
+            <p>Actúa como el puente principal. Verbaliza el "vibe" inicial mediante lenguaje natural para que la IA genere implementaciones rápidas. Es interactivo, ágil y requiere validación humana constante.</p>
+        </div>
+    </div>
+
+    <h2>3. Definición y Formalidad</h2>
+    <div class="flow-section">
+        <div class="card-header" style="justify-content: center;">
+            <span class="card-icon">📐</span> Desarrollo por Especificaciones (SDD / SPDD)
+        </div>
+        <p>Para sistemas empresariales y de misión crítica. Define rigurosamente el "qué" y el "cómo" antes de codificar. Utiliza ecosistemas de múltiples agentes de IA para garantizar que la arquitectura se respete de principio a fin.</p>
+        <div class="tags">
+            <span class="tag">Contratos Formales</span>
+            <span class="tag">Agentes de Seguridad (SAST)</span>
+            <span class="tag">Sandboxes Aislados</span>
+            <span class="tag">Transacciones ACID</span>
+        </div>
+    </div>
+
+    <footer>
+        Resumen Arquitectónico • Diseño Minimalista
+    </footer>
+</div>
+
+</body>
+</html>

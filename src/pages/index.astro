@@ -49,11 +49,11 @@ const lines = [
   { title: "Neuroingeniería", image: "lineas/neuroingenieria-web.png" },
   { title: "IoT y analítica", image: "lineas/iotanaltica-web.png" },
   { title: "Agricultura inteligente", image: "lineas/agriculturainteligente-web.png" },
-  { title: "Energías renovables", image: "lineas/energiasrenovables-web.png" },
+  { title: "Energía", image: "lineas/energiasrenovables-web.png" },
   { title: "LLMs y agentes", image: "lineas/agentes-web.png" },
   { title: "Física computacional", image: "lineas/fisicacomputacional-web.png" },
   { title: "Computación cuántica", image: "lineas/cuantica-web.png" },
-  { title: "Desarrollo de software + IA", image: "lineas/desarrollosoftware-web.png" }
+  { title: "Desarrollo de software + IA", image: "lineas/desarrollosoftware-web.png", href: "desarrollo-software-ia/" }
 ];
 
 const allies = [
@@ -140,16 +140,25 @@ const relatedLinks = [
         <img src={asset("logos/logo_labIA.png")} alt="" />
         <span>LIA-UNAL</span>
       </a>
-      <nav>
-        <a href="#inicio">Inicio</a>
-        <a href="#ecosistema">Ecosistema</a>
-        <a href="#propositos">Propósitos</a>
-        <a href="#programas">Programas</a>
-        <a href="#lineas">Líneas</a>
-        <a href="#aliados">Aliados</a>
-        <a href="#enlaces">Enlaces</a>
-        <a href="#contacto">Contacto</a>
-      </nav>
+      <details class="nav-menu">
+        <summary aria-label="Abrir menú de navegación">
+          <span class="menu-icon" aria-hidden="true">
+            <span></span>
+            <span></span>
+            <span></span>
+          </span>
+        </summary>
+        <nav class="nav-panel" aria-label="Secciones principales">
+          <a href="#inicio">Inicio</a>
+          <a href="#ecosistema">Ecosistema</a>
+          <a href="#propositos">Propósitos</a>
+          <a href="#programas">Programas</a>
+          <a href="#lineas">Líneas</a>
+          <a href="#aliados">Aliados</a>
+          <a href="#enlaces">Enlaces</a>
+          <a href="#contacto">Contacto</a>
+        </nav>
+      </details>
     </header>
 
     <main id="inicio">
@@ -257,9 +266,17 @@ const relatedLinks = [
           {
             lines.map((line) => (
               <article class="line-card">
-                <div class="line-visual" aria-hidden="true">
-                  <img src={asset(line.image)} alt="" loading="lazy" />
-                </div>
+                {
+                  line.href ? (
+                    <a class="line-visual line-visual-link" href={asset(line.href)} aria-label={`Ver detalle de ${line.title}`}>
+                      <img src={asset(line.image)} alt="" loading="lazy" />
+                    </a>
+                  ) : (
+                    <div class="line-visual" aria-hidden="true">
+                      <img src={asset(line.image)} alt="" loading="lazy" />
+                    </div>
+                  )
+                }
                 <h3>{line.title}</h3>
               </article>
             ))
