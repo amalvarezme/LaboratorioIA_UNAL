@@ -811,33 +811,8 @@ h3 {
   object-fit: cover;
 }
 
-.energy-metrics {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 12px;
-  margin: 14px 0;
-}
-
-.energy-metrics span {
-  min-height: 104px;
-  padding: 16px;
-  border: 1px solid var(--line);
-  border-radius: 8px;
-  color: var(--muted);
-  background: rgba(255, 255, 255, 0.78);
-  box-shadow: 0 12px 30px rgba(22, 38, 32, 0.06);
-}
-
-.energy-metrics strong {
-  display: block;
-  margin-bottom: 8px;
-  color: var(--cyan);
-  font-size: 1.38rem;
-  line-height: 1.1;
-}
-
 .energy-formal {
-  margin-top: 14px;
+  margin-top: 22px;
   margin-bottom: 44px;
 }
 
@@ -851,8 +826,8 @@ h3 {
 
 .energy-visual-grid {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 14px;
+  grid-template-columns: 1fr;
+  gap: 18px;
 }
 
 .energy-model-grid {
@@ -869,10 +844,10 @@ h3 {
 
 .energy-figure img {
   width: 100%;
-  aspect-ratio: 5 / 3;
+  aspect-ratio: 16 / 9;
   border-bottom: 1px solid var(--line);
-  object-fit: cover;
-  background: var(--surface);
+  object-fit: contain;
+  background: #f7faf8;
 }
 
 .energy-figure div {
@@ -887,6 +862,85 @@ h3 {
   margin-bottom: 0;
   color: #26342f;
   line-height: 1.58;
+}
+
+.chatbot-section {
+  margin-top: 46px;
+}
+
+.chatbot-showcase {
+  display: grid;
+  grid-template-columns: 1.16fr 0.84fr;
+  gap: 0;
+  overflow: hidden;
+  border: 1px solid rgba(8, 120, 77, 0.22);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.82);
+  box-shadow: 0 14px 38px rgba(22, 38, 32, 0.07);
+}
+
+.chatbot-visual {
+  margin: 0;
+  border-right: 1px solid var(--line);
+  background: #f7faf8;
+}
+
+.chatbot-visual img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  min-height: 390px;
+  object-fit: contain;
+}
+
+.chatbot-copy {
+  align-self: center;
+  padding: 26px;
+}
+
+.chatbot-copy h3 {
+  margin-bottom: 12px;
+  font-size: 1.28rem;
+}
+
+.chatbot-copy p {
+  color: #26342f;
+  line-height: 1.62;
+}
+
+.chatbot-capabilities {
+  display: grid;
+  gap: 10px;
+  margin: 18px 0;
+  padding: 0;
+  list-style: none;
+}
+
+.chatbot-capabilities li {
+  position: relative;
+  padding-left: 22px;
+  color: #26342f;
+  font-size: 0.94rem;
+  line-height: 1.5;
+}
+
+.chatbot-capabilities li::before {
+  position: absolute;
+  top: 0.62em;
+  left: 0;
+  width: 9px;
+  height: 9px;
+  border-radius: 999px;
+  background: linear-gradient(135deg, var(--green), var(--cyan));
+  content: "";
+}
+
+.chatbot-note {
+  margin-bottom: 0;
+  padding: 14px;
+  border: 1px solid rgba(0, 122, 159, 0.18);
+  border-radius: 8px;
+  background: rgba(0, 122, 159, 0.07);
 }
 
 .allies {
@@ -1089,15 +1143,20 @@ h3 {
   .detail-hero,
   .detail-formal,
   .download-panel,
-  .energy-hero {
+  .energy-hero,
+  .chatbot-showcase {
     grid-template-columns: 1fr;
+  }
+
+  .chatbot-visual {
+    border-right: 0;
+    border-bottom: 1px solid var(--line);
   }
 
   .ecosystem-grid,
   .line-grid,
   .detail-grid,
   .project-grid,
-  .energy-visual-grid,
   .energy-model-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
@@ -1106,8 +1165,7 @@ h3 {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
-  .related-grid,
-  .energy-metrics {
+  .related-grid {
     grid-template-columns: 1fr;
   }
 }
@@ -1339,4 +1397,3 @@ h3 {
   line-height: 1.5;
   margin: 0;
 }
-

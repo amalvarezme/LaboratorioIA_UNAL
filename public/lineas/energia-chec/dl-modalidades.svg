@@ -1,0 +1,47 @@
+<svg width="1200" height="720" viewBox="0 0 1200 720" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">Modalidades explicativas para modelos DL</title>
+  <desc id="desc">Resumen publico de familias de variables usadas para explicar predicciones de modelos de aprendizaje profundo.</desc>
+  <style>
+    .bg{fill:#f7faf8}.card{fill:#fff;stroke:#dbe8df;stroke-width:2}.soft{fill:#f9fcfa;stroke:#dbe8df;stroke-width:2}.text{fill:#17251f}.muted{fill:#60736a}.green{fill:#00782b}.support{fill:#80a022}.cyan{fill:#007a9f}.amber{fill:#f2b233}.title{font:800 34px Arial,sans-serif}.label{font:800 24px Arial,sans-serif}.copy{font:600 18px Arial,sans-serif}.tiny{font:600 15px Arial,sans-serif}.chip{font:800 18px Arial,sans-serif}
+  </style>
+  <rect class="bg" width="1200" height="720"/>
+  <rect class="card" x="36" y="36" width="1128" height="648" rx="8"/>
+  <text class="title text" x="72" y="92">Explicabilidad por modalidad</text>
+  <text class="copy muted" x="72" y="126">Familias de señales que ayudan a interpretar la predicción de impacto</text>
+
+  <g transform="translate(72 172)">
+    <rect class="soft" width="664" height="430" rx="8"/>
+    <text class="label text" x="34" y="54">Señales interpretables</text>
+    <g transform="translate(34 106)">
+      <text class="chip text" x="0" y="0">Clima</text>
+      <rect x="0" y="20" width="506" height="30" rx="8" fill="#e5f1ea"/>
+      <rect x="0" y="20" width="430" height="30" rx="8" fill="#00782b"/>
+
+      <text class="chip text" x="0" y="92">Radiación y temperatura</text>
+      <rect x="0" y="112" width="506" height="30" rx="8" fill="#e5f1ea"/>
+      <rect x="0" y="112" width="364" height="30" rx="8" fill="#f2b233"/>
+
+      <text class="chip text" x="0" y="184">Vegetación</text>
+      <rect x="0" y="204" width="506" height="30" rx="8" fill="#e5f1ea"/>
+      <rect x="0" y="204" width="286" height="30" rx="8" fill="#80a022"/>
+
+      <text class="chip text" x="0" y="276">Operación y red</text>
+      <rect x="0" y="296" width="506" height="30" rx="8" fill="#e5f1ea"/>
+      <rect x="0" y="296" width="244" height="30" rx="8" fill="#007a9f"/>
+    </g>
+  </g>
+
+  <g transform="translate(772 172)">
+    <rect class="soft" width="356" height="430" rx="8"/>
+    <text class="label text" x="30" y="54">Lectura pública</text>
+    <rect x="30" y="94" width="296" height="72" rx="8" fill="#eef8f1"/>
+    <text class="chip green" x="54" y="126">Qué cambia el riesgo</text>
+    <text class="tiny muted" x="54" y="148">familias de variables</text>
+    <rect x="30" y="194" width="296" height="72" rx="8" fill="#e8f5f8"/>
+    <text class="chip cyan" x="54" y="226">Qué tan consistente</text>
+    <text class="tiny muted" x="54" y="248">soporte entre señales</text>
+    <rect x="30" y="294" width="296" height="72" rx="8" fill="#fff7e6"/>
+    <text class="chip amber" x="54" y="326">Qué revisar primero</text>
+    <text class="tiny muted" x="54" y="348">priorización operativa</text>
+  </g>
+</svg>

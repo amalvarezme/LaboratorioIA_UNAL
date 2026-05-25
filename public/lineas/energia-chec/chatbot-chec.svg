@@ -1,0 +1,72 @@
+<svg width="1200" height="720" viewBox="0 0 1200 720" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">Chatbot CHEC</title>
+  <desc id="desc">Asistente CHEC con historial, selector de asistente, carga de documentos, respuesta y grafica.</desc>
+  <style>
+    .bg{fill:#f7faf8}.shell{fill:#fff;stroke:#dbe8df;stroke-width:2}.panel{fill:#f9fcfa;stroke:#dbe8df;stroke-width:2}.field{fill:#fff;stroke:#dbe8df;stroke-width:2}.user{fill:#e8f5f8;stroke:#cce6ec;stroke-width:2}.bot{fill:#eef8f1;stroke:#cfe6d6;stroke-width:2}.text{fill:#17251f}.muted{fill:#60736a}.green{fill:#00782b}.cyan{fill:#007a9f}.amber{fill:#f2b233}.title{font:800 32px Arial,sans-serif}.label{font:800 22px Arial,sans-serif}.copy{font:600 17px Arial,sans-serif}.tiny{font:600 14px Arial,sans-serif}.chip{font:800 15px Arial,sans-serif}
+  </style>
+  <rect class="bg" width="1200" height="720"/>
+  <rect class="shell" x="36" y="36" width="1128" height="648" rx="8"/>
+  <rect x="36" y="36" width="1128" height="70" rx="8" fill="#00782b"/>
+  <text class="title" fill="#fff" x="72" y="81">Chatbot de recomendaciones CHEC</text>
+  <text class="copy" fill="#dff1e5" x="858" y="80">consulta documental</text>
+
+  <g transform="translate(72 144)">
+    <rect class="panel" width="270" height="500" rx="8"/>
+    <text class="label text" x="24" y="42">Contexto</text>
+    <rect x="24" y="70" width="222" height="68" rx="8" fill="#eef8f1"/>
+    <text class="chip green" x="44" y="100">Cargar PDF</text>
+    <text class="tiny muted" x="44" y="122">norma o guía técnica</text>
+    <text class="tiny muted" x="24" y="178">Proceso</text>
+    <rect class="field" x="24" y="194" width="222" height="42" rx="8"/>
+    <text class="chip text" x="44" y="221">Mantenimiento</text>
+    <text class="tiny muted" x="24" y="278">Historial</text>
+    <rect class="field" x="24" y="294" width="222" height="46" rx="8"/>
+    <text class="tiny muted" x="44" y="323">Riesgo climático</text>
+    <rect class="field" x="24" y="356" width="222" height="46" rx="8"/>
+    <text class="tiny muted" x="44" y="385">Vegetación</text>
+  </g>
+
+  <g transform="translate(374 144)">
+    <rect class="panel" width="500" height="500" rx="8"/>
+    <rect class="field" x="24" y="24" width="210" height="44" rx="8"/>
+    <text class="tiny muted" x="44" y="43">Asistente</text>
+    <text class="chip text" x="44" y="62">Disponible</text>
+    <rect class="field" x="258" y="24" width="218" height="44" rx="8"/>
+    <text class="tiny muted" x="278" y="43">Modo</text>
+    <text class="chip text" x="278" y="62">Recomendación</text>
+
+    <rect class="user" x="128" y="104" width="328" height="72" rx="8"/>
+    <text class="copy text" x="152" y="134">¿Qué hacer ante humedad,</text>
+    <text class="copy text" x="152" y="158">viento y radiación altos?</text>
+
+    <rect class="bot" x="42" y="212" width="392" height="138" rx="8"/>
+    <text class="copy text" x="66" y="246">Priorizar inspección de vegetación,</text>
+    <text class="copy text" x="66" y="274">revisión térmica preventiva y</text>
+    <text class="copy text" x="66" y="302">verificación RETIE/NTC.</text>
+    <rect x="66" y="318" width="158" height="24" rx="8" fill="#fff"/>
+    <text class="tiny green" x="84" y="335">contexto 0.81</text>
+
+    <rect class="field" x="42" y="404" width="392" height="52" rx="8"/>
+    <text class="tiny muted" x="66" y="435">Consulta operacional o normativa...</text>
+    <circle cx="448" cy="430" r="19" fill="#00782b"/>
+    <path d="M440 430 L456 421 L451 438 Z" fill="#fff"/>
+  </g>
+
+  <g transform="translate(906 144)">
+    <rect class="panel" width="222" height="500" rx="8"/>
+    <text class="label text" x="24" y="42">Gráfica</text>
+    <text class="tiny muted" x="24" y="68">salida sintética</text>
+    <line x1="42" y1="304" x2="184" y2="304" stroke="#cbded3" stroke-width="2"/>
+    <line x1="42" y1="132" x2="42" y2="304" stroke="#cbded3" stroke-width="2"/>
+    <rect x="62" y="224" width="28" height="80" rx="6" fill="#007a9f"/>
+    <rect x="100" y="184" width="28" height="120" rx="6" fill="#00782b"/>
+    <rect x="138" y="154" width="28" height="150" rx="6" fill="#f2b233"/>
+    <text class="tiny muted" x="52" y="334">hum.</text>
+    <text class="tiny muted" x="94" y="334">viento</text>
+    <text class="tiny muted" x="136" y="334">rad.</text>
+    <rect x="24" y="382" width="174" height="62" rx="8" fill="#fff7e6" stroke="#f2d79a"/>
+    <text class="tiny amber" x="44" y="410">Publicable</text>
+    <text class="tiny muted" x="44" y="432">sin equipos ni</text>
+    <text class="tiny muted" x="44" y="452">coordenadas</text>
+  </g>
+</svg>
