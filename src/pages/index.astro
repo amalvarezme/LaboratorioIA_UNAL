@@ -56,6 +56,17 @@ const lines = [
   { title: "Desarrollo de software + IA", image: "lineas/desarrollosoftware-web.png", href: "desarrollo-software-ia/" }
 ];
 
+const courses = [
+  "Señales y sistemas",
+  "Teoría de señales",
+  "Teoría de aprendizaje de máquinas",
+  "Analítica de datos",
+  "Procesamiento digital de imágenes",
+  "Procesamiento de lenguaje natural",
+  "Procesos estocásticos",
+  "Tópicos avanzado en IA"
+];
+
 const allies = [
   { name: "Acemate", file: "transparentes/acemate.png" },
   { name: "Aguas de Manizales", file: "transparentes/aguasMzls.png" },
@@ -154,6 +165,7 @@ const relatedLinks = [
           <a href="#propositos">Propósitos</a>
           <a href="#programas">Programas</a>
           <a href="#lineas">Líneas</a>
+          <a href="#cursos">Cursos</a>
           <a href="#aliados">Aliados</a>
           <a href="#enlaces">Enlaces</a>
           <a href="#contacto">Contacto</a>
@@ -281,6 +293,29 @@ const relatedLinks = [
               </article>
             ))
           }
+        </div>
+      </section>
+
+      <section id="cursos" class="section academic-courses">
+        <div class="section-heading">
+          <p class="eyebrow">Formación académica</p>
+          <h2>Cursos académicos apoyados</h2>
+        </div>
+        <div class="courses-layout">
+          <figure class="courses-visual">
+            <img
+              src={asset("cursos/cursos-ia-universidad.png")}
+              alt="Aula universitaria con herramientas de inteligencia artificial"
+            />
+          </figure>
+          <div class="courses-content">
+            <div class="course-list" aria-label="Cursos académicos apoyados por LIA">
+              {courses.map((course) => <span>{course}</span>)}
+            </div>
+            <a class="course-feature-banner" href={asset("ciencia-datos-ia/")}>
+              Ciencia de datos + IA
+            </a>
+          </div>
         </div>
       </section>
 

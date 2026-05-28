@@ -1,0 +1,207 @@
+---
+import "../styles/global.css";
+
+const base = import.meta.env.BASE_URL;
+const asset = (path) => `${base.replace(/\/?$/, "/")}${path}`;
+
+const technologicalCompetencies = [
+  {
+    title: "Fundamentación Matemática",
+    text: "Aplicar estadística descriptiva e inferencial y álgebra lineal en la optimización y vectorización de datos"
+  },
+  {
+    title: "Ingeniería de Software",
+    text: "Dominar el lenguaje Python, control de versiones colaborativo (Git/GitHub) y gestión de bases de datos relacionales y vectoriales"
+  },
+  {
+    title: "Modelado Avanzado",
+    text: "Entrenar y evaluar arquitecturas de Machine Learning y Deep Learning, incluyendo redes convolucionales y Transformers"
+  },
+  {
+    title: "IA Generativa y NLP",
+    text: "Orquestar modelos de lenguaje grandes (LLMs), técnicas avanzadas de NLP y arquitecturas de sistemas multi-agente"
+  },
+  {
+    title: "MLOps y Despliegue",
+    text: "Productivizar prototipos mediante contenedores, APIs eficientes y optimización para hardware embebido y dispositivos móviles"
+  }
+];
+
+const modules = [
+  {
+    number: "01",
+    title: "Fundamentos, programación y datos",
+    hours: "20 h",
+    tools: "Python, Jupyter, Colab, NumPy, Pandas, SciPy, SQLAlchemy, ChromaDB",
+    outcome: "Análisis exploratorio, vectorización e indexación en base de datos vectorial"
+  },
+  {
+    number: "02",
+    title: "ML clásico y colaboración",
+    hours: "20 h",
+    tools: "Git, GitHub, VS Code, Scikit-Learn, XGBoost, LightGBM, Joblib",
+    outcome: "Repositorio técnico con pipeline de preprocesamiento, entrenamiento y evaluación"
+  },
+  {
+    number: "03",
+    title: "Deep Learning y visión",
+    hours: "25 h",
+    tools: "PyTorch, Torchvision, OpenCV, Ultralytics YOLO, Timm",
+    outcome: "Clasificador o detector con Transfer Learning, métricas y curvas de validación"
+  },
+  {
+    number: "04",
+    title: "NLP, LLMs y Hugging Face",
+    hours: "20 h",
+    tools: "Transformers, Accelerate, LangChain, LlamaIndex, Sentence-Transformers, Ollama",
+    outcome: "Sistema RAG local que consulta documentos técnicos con un LLM cuantizado"
+  },
+  {
+    number: "05",
+    title: "Agentes inteligentes",
+    hours: "15 h",
+    tools: "CrewAI, LangGraph, AutoGen, APIs de LLMs",
+    outcome: "Sistema multi-agente para investigación, redacción técnica y reportes estructurados"
+  },
+  {
+    number: "06",
+    title: "MLOps, despliegue y Edge AI",
+    hours: "20 h",
+    tools: "FastAPI, Docker, Render, AWS, ONNX Runtime, TensorRT, CoreMLTools",
+    outcome: "Proyecto final end-to-end con API, contenedor, despliegue y documentación"
+  }
+];
+---
+
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Curso Ciencia de datos + IA apoyado por LIA-UNAL: fundamentos, modelos, LLMs, agentes y despliegue"
+    />
+    <title>Ciencia de datos + IA | LIA-UNAL</title>
+    <link rel="icon" type="image/png" href={asset("logos/logo_labIA.png")} />
+  </head>
+  <body>
+    <header class="site-header" aria-label="Navegación principal">
+      <a class="brand" href={asset("")} aria-label="Volver al inicio">
+        <img src={asset("logos/logo_labIA.png")} alt="" />
+        <span>LIA-UNAL</span>
+      </a>
+      <details class="nav-menu">
+        <summary aria-label="Abrir menú de navegación">
+          <span class="menu-icon" aria-hidden="true">
+            <span></span>
+            <span></span>
+            <span></span>
+          </span>
+        </summary>
+        <nav class="nav-panel" aria-label="Secciones principales">
+          <a href={asset("")}>Inicio</a>
+          <a href={asset("#ecosistema")}>Ecosistema</a>
+          <a href={asset("#propositos")}>Propósitos</a>
+          <a href={asset("#programas")}>Programas</a>
+          <a href={asset("#lineas")}>Líneas</a>
+          <a href={asset("#cursos")}>Cursos</a>
+          <a href={asset("#aliados")}>Aliados</a>
+          <a href={asset("#enlaces")}>Enlaces</a>
+          <a href={asset("#contacto")}>Contacto</a>
+        </nav>
+      </details>
+    </header>
+
+    <main>
+      <section class="section detail-hero course-detail-hero">
+        <div class="detail-copy">
+          <a class="back-link" href={asset("#cursos")}>Volver a cursos académicos</a>
+          <p class="eyebrow">Curso académico · 120 horas</p>
+          <h1>Ciencia de datos + IA</h1>
+          <p class="lead">
+            Ruta práctica para diseñar, entrenar y desplegar modelos de IA en aplicaciones
+            de nube, móviles y hardware embebido, con buenas prácticas de ingeniería de software
+          </p>
+        </div>
+        <figure class="detail-visual course-detail-visual">
+          <img
+            src={asset("cursoIA/cienciaIA-web.png")}
+            alt="Mapa visual del curso Ciencia de datos e inteligencia artificial"
+          />
+        </figure>
+      </section>
+
+      <section class="section detail-content course-detail-content">
+        <article class="detail-diagnosis">
+          <p class="eyebrow">Perfil de egreso</p>
+          <p>
+            El estudiante será capaz de construir soluciones de IA desde
+            datos y modelos hasta producto desplegable, integrando control de versiones,
+            arquitecturas modernas, APIs, MLOps y optimización para Edge AI
+          </p>
+        </article>
+
+        <section class="tech-competencies" aria-labelledby="competencias-tecnologicas">
+          <div class="section-heading">
+            <p class="eyebrow">Resultados de aprendizaje</p>
+            <h2 id="competencias-tecnologicas">Competencias tecnológicas</h2>
+          </div>
+          <div class="tech-competency-list">
+            {
+              technologicalCompetencies.map((item) => (
+                <article>
+                  <span></span>
+                  <p>
+                    <strong>{item.title}:</strong> {item.text}
+                  </p>
+                </article>
+              ))
+            }
+          </div>
+        </section>
+
+        <section class="course-modules" aria-labelledby="modulos-curso">
+          <div class="section-heading">
+            <p class="eyebrow">Estructura curricular</p>
+            <h2 id="modulos-curso">Módulos del curso</h2>
+          </div>
+          <div class="course-module-grid">
+            {
+              modules.map((module) => (
+                <article class="course-module-card">
+                  <div class="module-meta">
+                    <span>{module.number}</span>
+                    <strong>{module.hours}</strong>
+                  </div>
+                  <h2>{module.title}</h2>
+                  <p>{module.tools}</p>
+                  <p class="module-outcome">{module.outcome}</p>
+                </article>
+              ))
+            }
+          </div>
+        </section>
+
+        <article class="detail-formal course-final-project">
+          <div>
+            <p class="eyebrow">Producto final</p>
+            <h2>Prototipo IA end-to-end</h2>
+            <p>
+              El cierre integra un modelo entrenado, una API en FastAPI, contenedorización
+              con Docker, despliegue en nube o simulación Edge, y documentación técnica
+              reproducible en repositorio
+            </p>
+          </div>
+          <div class="detail-tags" aria-label="Componentes técnicos del producto final">
+            <span>FastAPI</span>
+            <span>Docker</span>
+            <span>ONNX</span>
+            <span>RAG</span>
+            <span>Edge AI</span>
+          </div>
+        </article>
+      </section>
+    </main>
+  </body>
+</html>
